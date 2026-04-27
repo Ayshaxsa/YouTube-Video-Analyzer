@@ -1,5 +1,8 @@
 import streamlit as st
 from youtube_analyzer import build_yt_agent
+import os
+
+os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
 st.set_page_config(
     page_title="YouTube Video Analyzer",
