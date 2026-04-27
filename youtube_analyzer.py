@@ -5,6 +5,7 @@ from agno.agent import Agent
 from agno.models.groq import Groq
 from agno.tools.youtube import YouTubeTools
 import streamlit as st
+import os
 
 load_dotenv()
 
@@ -19,7 +20,7 @@ def build_yt_agent():
         #     id="llama-3.3-70b-versatile",
         #     api_key=get_api_key()
         # ),
-        model=Groq(id="llama-3.3-70b-versatile")
+        model=Groq(id="llama-3.3-70b-versatile"),
         tools=[YouTubeTools()],
         instructions=dedent("""\
             You are an expert You_ysis:
