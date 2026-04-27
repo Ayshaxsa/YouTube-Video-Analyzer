@@ -15,10 +15,11 @@ def build_yt_agent():
     return Agent(
         name="YouTube Agent",
         # model=OpenAIResponses(id="gpt-5.2"),
-        model=Groq(
-            id="llama-3.3-70b-versatile",
-            api_key=get_api_key()
-        ),
+        # model=Groq(
+        #     id="llama-3.3-70b-versatile",
+        #     api_key=get_api_key()
+        # ),
+        model=Groq(id="llama-3.3-70b-versatile")
         tools=[YouTubeTools()],
         instructions=dedent("""\
             You are an expert You_ysis:
